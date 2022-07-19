@@ -1,0 +1,844 @@
+/*html{
+	font-size: 30px;
+}*/
+body{
+	/*by depaut body has some margin*/
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 30px;
+
+}
+
+
+#body-header{
+	height: 65vh;
+	opacity: 0.8;
+	background-image: url(images/macbook.jpg);
+	/*if youn not set the height it take the dimention as 0*/
+
+	/*to see the entire image*/
+	background-size: cover;
+	/*image position*/
+	background-position: center;
+	/*whenever you scroll you see the image is not moving ,you feel you are moving over it*/
+	background-attachment: fixed;
+}
+
+/*horizontal list*/
+.horizontal-list{
+	/*remove the dots of unordered list*/
+	list-style: none;
+	/*list have some padding around them by default*/
+	/*list-style: none;*/
+	padding-left: 0px;
+	/*unorderd list has some margin around them by default */
+	margin: 0px;
+}
+
+.horizontal-list li{
+	/*make them in same line */
+	display: inline-block;
+	margin: 0px 8px 8px 0px; 
+	/*nivigation bars weight*/
+	font-weight: 800;
+	font-size: 0.9rem;
+}
+
+
+.horizontal-list li a{
+	color: white;
+	/*to remove the underline thing of anchor*/
+	text-decoration: none;
+	
+}
+/*/navigation items in center*/
+.text-center{
+	text-align: center;
+} 
+.nav-menu-heading li a{
+	transition: color 1s, border-bottom 4s;
+	/*if you hover there is a transition*/
+}
+/*hover */
+.nav-menu-heading li a:hover{
+	color: lightgrey;
+	/*when you hover over it it will make a border bottom*/
+	border-bottom: 1px solid white;
+}
+
+
+/*name and social icons*/
+#name-social-container{
+	/*view port height*/ 
+	margin-top: 20vh;
+}
+#my-name{
+	font-size: 3rem;
+	letter-spacing: 0.1rem;
+	color: white;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+.social-icons li a i{
+	/*color: grey;*/ 
+	padding: 10px;
+	font-size: 1rem;
+	/*that circular thing over icon*/
+	border-radius: 50%;
+
+
+}
+.social-icons li a i:hover{
+
+	box-shadow: 0px 0px 6px 4px grey;	
+	
+
+}
+/*for navigation*/
+/*media screen*/
+.bars{
+	color: white;
+    display: none;
+}
+.dropdown-list{
+    display: none;
+}
+/*for navigation*/
+/*media screen*/
+@media screen and (max-width: 550px){
+        #name-social-container{
+            
+            margin-top: 5vh;
+        }
+
+        #body-header{
+            height: 55vh;
+        }
+
+        .text-right{
+            text-align: right;
+        }
+        .dropdown-list{
+            /*remove the dots of unordered list*/
+            display: none;
+            list-style: none;
+            padding-left: 0px;
+            /*unorderd list has some margin around them by default */
+            margin: 0px;
+        }
+
+        .dropdown-list li{
+            /*make them in same line */
+           
+            margin: 0px 8px 8px 0px; 
+            /*nivigation bars weight*/
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: color 1s border-bottom 5s;
+        }
+
+
+        .dropdown-list li a{
+            color: white;
+            /*to remove the underline thing of anchor*/
+            text-decoration: none;
+            
+        }
+        .dropdown-menu:hover .dropdown-list{
+            display: block;
+            position: absolute;
+            /*background-color: pink;*/
+            left: 81%;
+            background-color: #1FCFDB;
+            box-shadow: 0px 0px 6px 4px lightgrey;	
+
+        }
+        .bars{
+            display: block;
+        }
+        /*remove the horizontal nav list in < 550px*/
+        .display{
+           display: none;
+        }
+
+
+
+}
+
+
+/*about section*/
+/*for every section*/
+section{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column ;
+	/*everything indide section should be in center*/
+	align-items: center;
+}
+section:nth-child(2n){
+	background-color: #9e9b9b29;
+}
+section:nth-child(2n+1){
+	background-color: white;
+}
+/*section:target{
+	background-color: lightgreen;
+	}*/
+	/*about*/
+	#about{
+		/*adjust the height accoring to requirement*/
+		height: auto;
+		/*width to take the entire line*/
+		width: 100%;
+		/*this*/
+		position: relative; 
+		margin-bottom: 30px;
+	}
+	#my-image{
+		height: 12rem;
+		width:12rem;
+		/*margin auto bring the image to center*/
+		margin: auto;
+		margin-top: -17vh; 
+		/*position: relative;*/
+
+	}
+	/*relative to parent */
+	/*here the parent is div and it set accoring to the parent*/
+	/*100% w.r.t to div */
+	#my-image img{
+		/*100% is relative unit*/
+		height: 100%;
+		width:100%;
+		border-radius: 50%
+
+
+	}
+	#my-image img{
+		/*color: grey;*/
+		padding: 1.5px;
+		font-size: 1rem;
+		/*border-radius: 50%;*/
+
+		border: 3px solid cyan;
+		/*box-shadow: 1px 1px 10px 2px lightgrey;*/
+
+
+	}
+	#my-image img:hover{
+
+		box-shadow: 0px 0px 6px 4px grey;	
+
+
+	}
+	#about p {
+		padding: 5px;
+		width: 70%;
+		height: 100%;
+		margin: auto;
+		margin-top: 10px;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: justify;
+		color: grey;
+		line-height: 28px;
+		font-weight: 200;
+		font-size: 1.1rem;
+	}
+
+	/*highlight content see the span of paragraph*/
+	.highlight{
+		color: #2857a4;
+		font-weight: 600;
+
+	}
+
+	/*skills section */
+
+	/*section heading*/
+	.section-heading{
+		width: auto;
+		padding: 20px 10px 10px;
+		/* margin: 10px auto;*/
+		font-weight: 400;
+		/*justify-content: */
+
+	}
+
+
+	.section-heading span{
+		font-size: 40px;
+		color: #2857a4;
+		display: inline-block;
+		padding-top: 10px;
+		margin-right: 0.5rem;
+
+
+	}
+
+	.skills-display {
+		width: 75%;
+    /*height: 100px;*/
+    /*border: 2px solid black; 	*/
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    /*same as it was default row*/
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skill-progress:hover{
+	box-shadow: 0px 0px 6px 4px grey;	
+}
+
+.skill-progress{
+	width: 11rem;
+	height: 2.4rem;
+	/*lightgrey in maams  call*/
+	background-color: lightgrey;  
+	border-radius: .8rem;
+	box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+	margin: 20px;
+	overflow: hidden;
+	/*border:2px solid black;*/
+}
+.skill-name span{
+	color: white;
+	font-size: 1rem;
+	margin-left: 10px;
+	vertical-align: middle;
+
+}
+
+.skill-progress > div{
+	/*/only the direct div of skill progress are affected*/
+	border-radius: 10px 0px 0px 10px;
+	/*shadow in boxes*/
+	box-shadow: 1px 1px 4px 2px white;
+} 
+/**/
+
+
+/*percentage class*/
+.eighty-five-percent{
+	width: 85%;
+	/*height of this class is inherit from parent*/
+	height: inherit;
+}
+.fify-percent{
+	width: 50%;
+	height: inherit;
+}
+.seventy-percent{
+	width: 70%;
+	height: inherit;
+}
+.fifyfive-percent{
+	width: 55%;
+	height: inherit;
+}
+/*background color*/
+.mb-blue {
+	background-color: #2857a4;
+}
+.mb-pink{
+	background-color: pink;
+}
+.mb-purple{
+	background-color: purple;
+}
+.mb-maroon{
+	background-color: maroon;
+}
+/*color*/
+.m-blue{
+	color: blue;
+}
+/*common margin section*/
+.mb75px{
+	margin-bottom: 75px;
+}
+
+.m0 {
+	margin: 0;
+}
+
+/* work experince timeline*/
+/* educaion experince timeline*/
+
+.timeline{
+	position: relative;
+	/*left right is 100% by*/
+	width: 75%;
+	height: auto;
+	/*height: 100%;*/
+	padding: 20px;
+	/*border:2px solid black;*/
+
+
+}
+.timeline-box{
+	padding: 5px; 
+	width: 40%;
+	height: auto;
+	min-height: 150px;
+	position: relative; 
+
+	/*margin: 5px;   */
+	/*left: 5%;*/
+	text-align: right; 
+	/*border:2px solid black;*/
+}
+/*to get dot w.r.t cointainer*/
+.timeline-box::after {
+	content: '';
+	/*position w.r.t box indivisual box*/
+	position: absolute;
+	/*display: inline-block;*/
+	height: 15px;
+	width: 15px;
+	background-color: grey;
+	/*20% down from each timeline*/
+	top: 20%;
+	/*all dots move to right*/
+	/*right: 0%;*/
+	border-radius: 50%;
+	z-index: 1;
+
+
+}
+/*as time line box is relative you are able to shift 2n components*/
+.timeline-box:nth-child(2n){
+	left: 53%;
+}
+
+.timeline-box:nth-child(2n+1)::after {
+	right: -18%;
+}
+
+.timeline-box:nth-child(2n)::after {
+	left: -15%;
+}
+.timeline-divider-experience{
+	position: absolute;
+	/*height: 75%;*/
+	height: 80%;
+	width: 0;
+	border:1px dashed #0096fa6b;
+	/*move after you scroll and top distance is 10%*/
+	top: 2%;
+	left: 47.5%;
+	/*bottom: 70%;*/
+}
+.timeline-divider-education{
+	position: absolute;
+	/*height: 75%;*/
+	height: 80%;
+	width: 0;
+	border:1px dashed #0096fa6b;
+	top: 5%;
+	left: 47.7%;
+
+	/*bottom: 70%;*/
+}
+.timeline-traveller{
+	position: sticky;
+    list-style: none;
+	top: 8%;
+	transform: rotate(90deg);
+	color: lightblue;
+	z-index: 2;
+}
+
+/*pdding of caintainer*/
+.timeline-container {
+	padding: 10px;
+	/*position: relative;*/
+	/*border:2px solid black;*/
+}
+.timeline-logo {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+    height: 4rem;
+	width: 4rem;
+/*
+done by me as hidden not woeking*/
+	overflow: visible;
+}
+
+.timeline-logo > img {
+	/*w.r.t container*/
+	width: 100%;
+}
+
+.experience-designation{
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+.experience-company-name {
+	font-size: 1.2rem;
+	margin: 5px 0 0 0;
+	color: #eb822d;
+	font-weight: 400;
+	
+}
+.experience-duration {
+	/*color: #9e9b9b;*/
+	font-size: 1rem;
+	font-weight: 100;
+	color: grey;
+	
+}
+
+.experience-description {
+	font-size: 15px;
+	padding: 2px;
+	color: grey;
+	line-height: 20px;
+}
+.text-align-justify {
+	text-align: justify;
+}
+
+/*responsiveness of timeline*/
+/*if screen size is lesser then 768*/
+/*media section for experience*/
+@media screen and (max-width: 768px){
+
+	.timeline-divider-experience{
+		left: 5.5%;	
+	}
+	.timeline-divider-education{
+		left: 5%;
+	}
+
+	.timeline-box{
+		left: 12% ! important;
+		width: 80%;
+		margin-bottom: 1px;
+	}
+	/*dots*/
+	.timeline-box:nth-child(2n+1)::after {
+		left: -14%;
+	}
+
+	.timeline-box:nth-child(2n)::after {
+		left: -14%;
+	}
+	/*logo*/
+
+	.timeline-logo {
+		position: absolute;
+		width: 25%;
+		top: 5%;
+		left: -10px;
+		/*done by me as hidden not woeking*/
+		overflow: hidden;
+	}
+
+	.timeline-logo > img {
+		/*w.r.t container*/
+		width: 50%;
+
+	}
+
+	.experience-designation{
+		font-size: 1.2rem;
+	}
+	.experience-company-name {
+		font-size: 1rem;
+	}
+	.experience-duration {
+		font-size: .8rem;
+	}
+
+}
+
+
+/*/educatin*/
+.education-name{
+	font-size: 1.5rem;
+}
+.education-branch{
+	margin: 5px 0px 0px;
+	color: #eb822d;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+.education-duration{
+	color: grey;
+	font-weight: 100;
+	font-size: 1rem;
+}
+.education-description{
+	font-size: 15px;
+	padding: 2px;
+	color: grey;
+	line-height: 20px;
+
+}
+.text-align-justify {
+	text-align: justify;
+}
+/*if screen size is lesser then 768*/
+@media screen and (max-width: 768px){
+	
+
+	.education-designation{
+		font-size: 1.2rem;
+	}
+	.education-company-name {
+		font-size: 1rem;
+	}
+	.education-duration {
+		font-size: .8rem;
+	}
+
+}
+/*portfolio section*/
+.portfolio-container{
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 50px;
+	margin-bottom: 20px;
+	justify-content: space-around;
+}
+.project-image{
+	/*height: 300px;
+	width: 400px;*/
+	max-width: 250px; 
+	overflow: hidden;
+	margin: 25px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+/*take the entire area of project image*/
+.project-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-details {
+	transition: all 0.5s ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*make it 50% and hover over the cointainer you will see the change*/
+	/*w.r.t portfolio-container*/
+	height: 100%;
+	/* width: 50%; */
+	color: transparent;
+	text-align: center;
+	padding: 10px;
+}
+
+.project-image:hover {
+	box-shadow: 0 0 20px #74ADC8;
+	background-size: cover;
+}
+.project-image:hover .portfolio-details {
+	background-color: #80808078;
+	color: white;
+}
+/* Contact Form */
+#contact{
+	/*background-color: #0abcf9;*/
+	background-image: linear-gradient(50deg, #2857a4 0%,#403066 74%);
+	/*color: white;*/
+	padding-bottom: 40px;
+	/*border:2px solid yellow;*/
+}
+
+#contact h1 span {
+	color: white;
+}
+
+.contact-container{
+	/*border:2px solid yellow;*/
+	margin: 12px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.contact-form-container{
+	/*border:2px  solid black;*/
+	width: 50%;
+	/*display: inline-block;*/
+	
+}
+#contact-form {
+	
+	margin-left: 20%;
+}
+
+
+#contact-form input , textarea{
+	max-width: 90%;
+	margin: 5px ;
+	padding: 6px;
+	border:2px  solid transparent;
+	border-bottom: 2px solid white;
+	color: #d9dcdd;
+	background: transparent;
+	/*the text you type in input box color*/
+	/*or 90 of contact form cointainer*/
+	width: 70%;
+	line-height: 1.0rem;
+
+	font-size: 1rem;
+	font-style: all;
+
+
+}
+#contact-form button[type="submit"] {
+	background-color: transparent;
+	font-size: 20px;
+	border-color: white;
+	margin-top: 5%;
+	margin-left: 14%;
+	border-radius: 2%;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 1rem;
+	padding: 8px;
+	text-transform: uppercase;
+	margin-right: 200px;
+	width: 210px;
+
+}
+
+#contact-form button:hover {
+	background: white;
+	color: #13386fe0;
+}
+.my-details-container {
+	width: 55%;
+	margin-top: -2.5%;
+	margin-left: 2%;
+	/*border:2px solid black;*/
+
+}
+.my-details-container h4 {
+	color: white;
+	font-weight: 450;
+	font-size: 1.2rem;
+	margin-left: 5px;
+}
+.my-details-container h4::first-letter{
+text-transform: capitalize;
+}
+
+.my-details-container p {
+	color: #d9dcdd;
+	font-size: 0.9rem;
+	margin-left: 5px;
+}
+/*all logo image and no both white*/
+.my-details-info-container {  
+	margin-bottom: 10px;
+	margin-left: 5px;
+	color: #d9dcdd;
+	font-size: 1rem;
+}
+/*data*/
+.my-details-info-container span {
+	margin-left: 1rem;
+}
+
+/*bottom social icons*/
+#contact .social-icons li a i {
+	font-size: 1.5rem;
+	margin:  10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+
+
+}
+#contact .social-icons li a i:hover{
+
+	box-shadow: 0px 0px 5px 4px white;	
+	
+
+}
+.sub-btn{
+		position: relative;
+		left: -5%;
+
+	}
+/*media section for contact*/
+@media screen and (max-width: 768px){
+
+
+	.contact-container{
+
+		margin: 12px;
+		padding: 10px;
+		display: block;
+	}
+	/**/
+	.contact-form-container{
+		/*border:2px  solid black;*/
+		width: 100%;
+		/*text-align: center;*/
+
+		
+	}
+	#contact-form button[type="submit"] {
+		/*position: relative;*/
+		font-size: 10px;
+        /*align-items: center;*/
+		/*margin: 10px solid black;*/
+		border-radius: 4%;
+		text-align: center;
+		/*left: 10px;*/
+
+	}
+	.sub-btn{
+		position: relative;
+		left: -5%;
+		padding-bottom: 12px;
+	}
+
+	#contact-form button:hover {
+		background: white;
+		color: #13386fe0;
+	}
+	.my-details-container {
+		/*border:2px  solid black;*/
+		margin-top: 20px;
+		width: 100%;
+
+	}
+	.my-details-container h4 {
+
+		font-size: 1rem;
+		
+		margin-top: 10px;
+		padding-left: 50px;
+
+	}
+
+	.my-details-container p {
+		margin-left: 10px;
+		margin-right: 10px;
+		text-align: justify;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.my-details-info-container {  
+		padding-left:50px;
+	}
+	
+
+	
+
+}
+
+
+
